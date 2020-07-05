@@ -1,0 +1,44 @@
+hello there hello
+https://www.bbc.com
+world
+hi
+https://www.bbc.com
+new york
+hello
+https://www.cplusplus.com
+x x x x x x x x x
+some kinf of text http://www.acceleratedcpp.com more text here.
+there
+new york
+Then here there is a website https://www.google.com and then some other text.
+cat cat cat
+       https://www.some-spaces.com
+world world
+https://www.ruby.com
+denver 
+Now some more websites: https://stackoverflow.com/ :) https://www.haskell.org/ https://www.python.org/ :o https://www.php.net/ >.< https://www.ruby-lang.org/en/ https://golang.org/ ?_## 
+x
+chicago
+denver denver 
+https://github.com/
+ciao ciao ciao
+x
+https://www.cplusplus.com
+Some other text here.
+https://www.ruby.com
+Ottawa
+The quick brown fox. $$ https://someKindOfWebsite O_o
+jumps https://www.ruby.com over https://www.ruby.com the lazy dog
+httpHelloWorld://badabing!"
+https://www.ruby.com
+Exercise 7-8: Change the cross-reference program to find
+all the URLs in a file, and write all the lines 
+on which each distincti URL occurs
+                                    https://github.com/
+SKYDECK EDGE!
+Our Mathematical universe
+https://www.ruby.com
+max tegmark
+my quest for the ultimate nature of reality
+https://github.com/
+https://someKindOfWebsite

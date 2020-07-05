@@ -1,0 +1,56 @@
+diary on;
+edit one_more
+one_more
+Gimme a number, buddy: 1
+ans =
+     2
+one_more
+Gimme a number, buddy: 5
+ans =
+     6
+one_more
+Gimme a number, buddy: pi/2
+ans =
+    2.5708
+fprintf('This conlcludes Lesson 3\n')
+This conlcludes Lesson 3
+fprintf('This conlcludes Lesson 3')
+This conlcludes Lesson 3
+fprintf('This conlcludes Lesson 3\n')
+This conlcludes Lesson 3
+fprintf('This conlcludes Lesson 3\n\n\n')
+This conlcludes Lesson 3
+
+
+edit check_out
+check_out(3,2.71)
+3 items at 2.71 each
+Total = $ 8.13
+fprintf('12.5%% of 1234 equals %.3f\n'0.125*1234)
+ fprintf('12.5%% of 1234 equals %.3f\n'0.125*1234)
+                                       |
+{Error: Unexpected MATLAB expression.
+} 
+fprintf('12.5%% of 1234 equals %.3f\n',0.125*1234)
+12.5% of 1234 equals 154.250
+fprintf('This is a backslash character : \\\n')
+This is a backslash character : \
+fprintf('How about a single quote ('')?\n')
+How about a single quote (')?
+fprintf('%d lb butter, %d tbsp cocoa, %d cps flour, and %d cps sugar\n',1,8,4,4)
+1 lb butter, 8 tbsp cocoa, 4 cps flour, and 4 cps sugar
+fprintf('%d lb butter, %d tbsp cocoa, %d cps flour, and %d cps sugar\n',1,8,4)
+1 lb butter, 8 tbsp cocoa, 4 cps flour, and 
+
+fprintf('%d lb butter, %d tbsp cocoa, %d cps flour, and %d cps sugar\n',1,8,4,4,4)
+1 lb butter, 8 tbsp cocoa, 4 cps flour, and 4 cps sugar
+4 lb butter, 
+
+fprintf('%4.1f\n',[1 2 3 4 5 6]);
+ 1.0
+ 2.0
+ 3.0
+ 4.0
+ 5.0
+ 6.0
+diary off;

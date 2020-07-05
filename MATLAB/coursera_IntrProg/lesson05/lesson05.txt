@@ -1,0 +1,411 @@
+diary on;
+10 == 20
+ans =
+     0
+2 == 2
+ans =
+     1
+10 <= 20
+ans =
+     1
+10 ~= 20
+ans =
+     1
+3 == (35-32)
+ans =
+     1
+%1 is true, 0 is false
+x = (16*64 > 1000) + 9
+x =
+    10
+%the parentheses have an importante effect here.
+x = 16*64 > 1000 + 9
+x =
+     1
+%This time the addition opertator is executed before the the greater than operator
+%the precedence of plus is higher than the precedence of greater than
+16*64
+ans =
+        1024
+edit if_test
+if_test(0)
+0 is false
+if_test(10)
+10 is true
+if_test(1)
+1 is true
+if_test(-1)
+-1 is true
+clc;
+[4 -1 7 5 3] .* [5 -9 6 5 -3]
+ans =
+    20     9    42    25    -9
+[4 -1 7 5 3] > [5 -9 6 5 -3]
+ans =
+     0     1     1     0     1
+[4 -1 7 5 3] <= 4
+ans =
+     1     1     0     0     1
+sum([14 9 3 14 8 3] == 14)
+ans =
+     2
+% we are counting the element in the array that are equal to 14
+edit order3
+order3(1,3,4)
+ans =
+     1
+order3(1,4,3)
+ans =
+     0
+order3(3,2,1)
+ans =
+    -1
+edit not_smallest(x,y,z)
+{Error using <a href="matlab:helpUtils.errorDocCallback('edit', '/Applications/MATLAB_R2014a.app/toolbox/matlab/codetools/edit.m', 61)" style="font-weight:bold">edit</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2014a.app/toolbox/matlab/codetools/edit.m',61,0)">line 61</a>)
+Undefined function or variable 'x'.} 
+edit not_smallest
+not_smallest(3,2,1)
+ans =
+     1
+not_smallest(1,2,3))
+ not_smallest(1,2,3))
+                    |
+{Error: Unbalanced or unexpected parenthesis or bracket.
+} 
+not_smallest(1,2,3)
+ans =
+     0
+not_smallest(2,2,4)
+ans =
+     1
+clc
+1 && 2
+ans =
+     1
+3 && 1
+ans =
+     1
+3 && 0
+ans =
+     0
+0 && 0
+ans =
+     0
+23 && 0
+ans =
+     0
+0 && 0
+ans =
+     0
+-1 && -1
+ans =
+     1
+1 || 3
+ans =
+     1
+pi || -1234
+ans =
+     1
+23 || 0
+ans =
+     1
+0 || 1
+ans =
+     1
+0 || 0
+ans =
+     0
+a = 1
+a =
+     1
+b = 2 
+b =
+     2
+c = 0
+c =
+     0
+d = ~(a && b) || (b && c)
+d =
+     0
+d = ~(a && b) || (b || c)
+d =
+     1
+a && b
+ans =
+     1
+b && c
+ans =
+     0
+d = (a && b) || (b && c)
+d =
+     1
+a || b
+ans =
+     1
+b || c
+ans =
+     1
+d = (a && b) || (b || c)
+d =
+     1
+b*(0<b && b>10)
+ans =
+     0
+b*(0<b && b<10)
+ans =
+     2
+total = 0;
+b = 5;
+total = total + b*(0<b && b<10)
+total =
+     5
+b = 3;
+total = total + b*(0<b && b<10)
+total =
+     8
+b = 11;
+total = total + b*(0<b && b<10)
+total =
+     8
+[1 pi 0 -2]
+ans =
+    1.0000    3.1416         0   -2.0000
+~[1 pi 0 -2]
+ans =
+     0     0     1     0
+[1 -3 0 9 0] && [pi 0 0 2 3] 
+{Operands to the || and && operators must be convertible to logical scalar values.} 
+[1 -3 0 9 0] & [pi 0 0 2 3]
+ans =
+     1     0     0     1     0
+[1 -3 0 9 0] | [pi 0 0 2 3]
+ans =
+     1     1     0     1     1
+[1 2 3 4] + [4 3 2 1]
+ans =
+     5     5     5     5
+[1 2 3 4] .+ [4 3 2 1]
+ [1 2 3 4] .+ [4 3 2 1]
+           |
+{Error: Unexpected MATLAB operator.
+} 
+[1 2 3 4] * [4 3 2 1]
+{Error using <a href="matlab:helpUtils.errorDocCallback('mtimes')" style="font-weight:bold"> * </a>
+Inner matrix dimensions must agree.} 
+[1 2 3 4] .* [4 3 2 1]
+ans =
+     4     6     6     4
+[1 2 3 4] ./ [4 3 2 1]
+ans =
+    0.2500    0.6667    1.5000    4.0000
+2 & [0 1; 2 3]
+ans =
+     0     1
+     1     1
+2 | [0 1; 2 3]
+ans =
+     1     1
+     1     1
+sqrt(2)
+ans =
+    1.4142
+1.4 < sqrt(2) & [pi > 3 -1 >1]
+ans =
+     1     0
+(1.4 < sqrt(2)) & [pi > 3 -1 >1]
+ans =
+     1     0
+1.4 < (sqrt(2) & [pi > 3 -1 >1])
+ans =
+     0     0
+(sqrt(2) & [pi > 3 -1 >1])
+ans =
+     1     0
+help precedence 
+ <strong>precedence</strong> Operator Precedence in MATLAB.
+ 
+    MATLAB has the following precedence for the built-in operators when
+    evaluating expressions (from highest to lowest):
+ 
+       1. transpose (.'), power (.^), complex conjugate
+          transpose ('), matrix power (^)
+ 
+       2. unary plus (+), unary minus (-), logical negation (~)
+ 
+       3. multiplication (.*), right division (./), left
+          division (.\), matrix multiplication (*), matrix right 
+          division (/), matrix left division (\)
+ 
+       4. addition (+), subtraction (-)
+ 
+       5. colon operator (:)
+ 
+       6. less than (<), less than or equal to (<=), greater than
+          (>), greater than or equal to (>=), equal to (==), not
+          equal to (~=)
+ 
+       7. element-wise logical AND (&)
+ 
+       8. element-wise logical OR (|)
+ 
+       9. short-circuit logical AND (&&)
+ 
+      10. short-circuit logical OR (||)
+ 
+    See also <a href="matlab:help syntax">syntax</a>, <a href="matlab:help arith">arith</a>.
+
+edit guess_my_number3
+guess_my_number3(53)
+Too big. Try again!
+guess_my_number3(40)
+Too small. Try again!
+guess_my_number3(42)
+Wow! You answered the question!
+edit ultimate_question_nested2
+(1:4)' * (1:5)
+ans =
+     1     2     3     4     5
+     2     4     6     8    10
+     3     6     9    12    15
+     4     8    12    16    20
+edit multable
+[1:4]' * [1:5]
+ans =
+     1     2     3     4     5
+     2     4     6     8    10
+     3     6     9    12    15
+     4     8    12    16    20
+multable(4,5)
+ans =
+     1     2     3     4     5
+     2     4     6     8    10
+     3     6     9    12    15
+     4     8    12    16    20
+multable(2,3)
+ans =
+     1     2     3
+     2     4     6
+diary off;
+multable()
+{Error using <a href="matlab:helpUtils.errorDocCallback('multable', '/Users/matteogirardi/Dropbox/coding/matlab/lesson05/multable.m', 3)" style="font-weight:bold">multable</a> (<a href="matlab: opentoline('/Users/matteogirardi/Dropbox/coding/matlab/lesson05/multable.m',3,0)">line 3</a>)
+Not enough input arguments.} 
+multable(-2,-3)
+ans =
+     []
+diary off;
+edit multable1
+help multable
+
+No help found for multable.m.
+
+help multable1
+ MULTABLE multiplication table.
+  T = MULTABLE(N) returns an N-by-N matrix
+  containing the multiplication table for
+  the integers 1 through N.
+  MULTABLE(N,M) returns an N-by-M matrix.
+  Both input arguments must be positive integers.
+  [T SM] = MULTABLE(...) returns the matrix containing 
+  the multiplication table in T and the sum of all 
+  its elements in SM.
+
+multable1()
+{Error using <a href="matlab:helpUtils.errorDocCallback('multable1', '/Users/matteogirardi/Dropbox/coding/matlab/lesson05/multable1.m', 14)" style="font-weight:bold">multable1</a> (<a href="matlab: opentoline('/Users/matteogirardi/Dropbox/coding/matlab/lesson05/multable1.m',14,0)">line 14</a>)
+must have at least one input argument} 
+multable1(1)
+{Undefined function or variable 'narg'.
+Error in <a href="matlab:helpUtils.errorDocCallback('multable1', '/Users/matteogirardi/Dropbox/coding/matlab/lesson05/multable1.m', 17)" style="font-weight:bold">multable1</a> (<a href="matlab: opentoline('/Users/matteogirardi/Dropbox/coding/matlab/lesson05/multable1.m',17,0)">line 17</a>)
+if narg < 2 } 
+multable1(2)
+{Undefined function or variable 'narg'.
+Error in <a href="matlab:helpUtils.errorDocCallback('multable1', '/Users/matteogirardi/Dropbox/coding/matlab/lesson05/multable1.m', 17)" style="font-weight:bold">multable1</a> (<a href="matlab: opentoline('/Users/matteogirardi/Dropbox/coding/matlab/lesson05/multable1.m',17,0)">line 17</a>)
+if narg < 2 } 
+multable1()
+{Error using <a href="matlab:helpUtils.errorDocCallback('multable1', '/Users/matteogirardi/Dropbox/coding/matlab/lesson05/multable1.m', 14)" style="font-weight:bold">multable1</a> (<a href="matlab: opentoline('/Users/matteogirardi/Dropbox/coding/matlab/lesson05/multable1.m',14,0)">line 14</a>)
+must have at least one input argument} 
+multable1(1)
+ans =
+     1
+multable1(2)
+ans =
+     1     2
+     2     4
+multable1(3)
+ans =
+     1     2     3
+     2     4     6
+     3     6     9
+multable1(4)
+ans =
+     1     2     3     4
+     2     4     6     8
+     3     6     9    12
+     4     8    12    16
+multable1(-4)
+{Error using <a href="matlab:helpUtils.errorDocCallback('multable1', '/Users/matteogirardi/Dropbox/coding/matlab/lesson05/multable1.m', 24)" style="font-weight:bold">multable1</a> (<a href="matlab: opentoline('/Users/matteogirardi/Dropbox/coding/matlab/lesson05/multable1.m',24,0)">line 24</a>)
+n needs to be a positive integer} 
+multable1(3.5)
+{Error using <a href="matlab:helpUtils.errorDocCallback('multable1', '/Users/matteogirardi/Dropbox/coding/matlab/lesson05/multable1.m', 24)" style="font-weight:bold">multable1</a> (<a href="matlab: opentoline('/Users/matteogirardi/Dropbox/coding/matlab/lesson05/multable1.m',24,0)">line 24</a>)
+n needs to be a positive integer} 
+multable1(4,6)
+ans =
+     1     2     3     4     5     6
+     2     4     6     8    10    12
+     3     6     9    12    15    18
+     4     8    12    16    20    24
+[table, summa] = multable1(4,6)
+table =
+     1     2     3     4     5     6
+     2     4     6     8    10    12
+     3     6     9    12    15    18
+     4     8    12    16    20    24
+summa =
+   210
+edit accumulate
+accumulate(3)
+ans =
+     3
+accumulate(5)
+ans =
+     8
+accumulate(10)
+ans =
+    18
+accumulate(-10)
+ans =
+     8
+accumulate(40)
+ans =
+    48
+accumulate(-50)
+ans =
+    -2
+accumulate(50)
+ans =
+    48
+clear accumulate
+accumulate(10)
+ans =
+    10
+accumulate(40)
+ans =
+    50
+edit snarky_multable
+snarky_multabel(3,4)
+{Undefined function 'snarky_multabel' for input arguments
+of type 'double'.} 
+snarky_multable(3,4) 
+ans =
+     1     2     3     4
+     2     4     6     8
+     3     6     9    12
+snarky_multable(3,-2)
+{Error using <a href="matlab:helpUtils.errorDocCallback('snarky_multable', '/Users/matteogirardi/Dropbox/coding/matlab/lesson05/snarky_multable.m', 27)" style="font-weight:bold">snarky_multable</a> (<a href="matlab: opentoline('/Users/matteogirardi/Dropbox/coding/matlab/lesson05/snarky_multable.m',27,0)">line 27</a>)
+m needs to be a positive integer} 
+snarky_multable(2.3)
+{Error using <a href="matlab:helpUtils.errorDocCallback('snarky_multable', '/Users/matteogirardi/Dropbox/coding/matlab/lesson05/snarky_multable.m', 34)" style="font-weight:bold">snarky_multable</a> (<a href="matlab: opentoline('/Users/matteogirardi/Dropbox/coding/matlab/lesson05/snarky_multable.m',34,0)">line 34</a>)
+n needs to be a positive integer} 
+snarky_multable([2 3 4 5])
+{Error using <a href="matlab:helpUtils.errorDocCallback('snarky_multable', '/Users/matteogirardi/Dropbox/coding/matlab/lesson05/snarky_multable.m', 40)" style="font-weight:bold">snarky_multable</a> (<a href="matlab: opentoline('/Users/matteogirardi/Dropbox/coding/matlab/lesson05/snarky_multable.m',40,0)">line 40</a>)
+What part of "positive integer do you not understand?} 
+diary off;

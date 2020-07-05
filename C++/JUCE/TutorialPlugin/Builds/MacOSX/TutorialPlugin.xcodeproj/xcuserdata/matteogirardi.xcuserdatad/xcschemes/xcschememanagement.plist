@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>TutorialPlugin (AU).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>TutorialPlugin (All).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>TutorialPlugin (Shared Code).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>TutorialPlugin (VST).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>3F5F8E35F4B71019D73A1B60</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>427E3715055A54A3F4A7F121</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>54B17859B99206B82E52221D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D39B0E92EFEF3C1C7FBD705E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

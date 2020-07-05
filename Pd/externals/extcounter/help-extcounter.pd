@@ -1,0 +1,39 @@
+#N canvas 459 214 450 300 10;
+#X obj 347 11 extcounter-meta;
+#X obj 206 195 extcounter;
+#X obj 206 165 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 263 176 5 0 0 0 - - -, f 5;
+#X obj 263 225 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 234 159 5 0 0 0 - - -, f 5;
+#X msg 109 122 reset;
+#X msg 109 80 set \$1;
+#X floatatom 109 58 5 0 0 0 - - -, f 5;
+#X floatatom 206 225 5 0 0 0 - - -, f 5;
+#X obj 206 133 metro 150;
+#X obj 206 106 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 257 108 5 0 0 0 - - -, f 5;
+#X obj 257 64 loadbang;
+#X msg 257 86 500;
+#X msg 109 34 bound 1 5;
+#X text 18 34 set boundaries;
+#X text 1 57 set to init value;
+#X text -11 121 reset to init value;
+#X text 298 177 step width;
+#X text 268 159 upper boundary;
+#X connect 1 0 9 0;
+#X connect 1 1 4 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 2;
+#X connect 5 0 1 1;
+#X connect 6 0 1 0;
+#X connect 7 0 1 0;
+#X connect 8 0 7 0;
+#X connect 10 0 2 0;
+#X connect 11 0 10 0;
+#X connect 12 0 10 1;
+#X connect 13 0 14 0;
+#X connect 14 0 12 0;
+#X connect 15 0 1 0;

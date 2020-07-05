@@ -1,0 +1,488 @@
+diary on;
+pwd
+ans =
+/Users/matteogirardi/Dropbox/coding/matlab/lesson08
+['C:', strrep(pwd, '/', '\')]
+ans =
+C:\Users\matteogirardi\Dropbox\coding\matlab\lesson08
+ls
+Lesson8.pdf		Lesson_8_Examples.zip	hw8			lesson08.txt
+
+whos contents
+contents = ls
+contents =
+Lesson8.pdf		Lesson_8_Examples.zip	hw8			lesson08.txt
+
+contents
+contents =
+Lesson8.pdf		Lesson_8_Examples.zip	hw8			lesson08.txt
+
+whos contents
+  Name          Size            Bytes  Class    Attributes
+
+  contents      1x54              108  char               
+
+cd ..
+cd lesson08/
+cd('..')
+cd lesson08/
+cd Lesson_8_Examples/
+ls -l
+total 104
+-rwxr-xr-x@ 1 matteogirardi  staff    431 Jan 15  2015 Climate.txt
+-rwxr-xr-x@ 1 matteogirardi  staff  10913 Jul 26  2012 Nashville_climate_data.xlsx
+-rwxr-xr-x@ 1 matteogirardi  staff    185 Aug 30  2012 append_array_bin.m
+-rwxr-xr-x@ 1 matteogirardi  staff    328 Sep  6  2012 custom_read_bin.m
+-rwxr-xr-x@ 1 matteogirardi  staff    357 Sep  6  2012 custom_write_bin.m
+-rwxr-xr-x@ 1 matteogirardi  staff      0 Jan 16  2015 numestr.m
+-rwxr-xr-x@ 1 matteogirardi  staff    188 Jan 16  2015 read_bin_file.m
+-rwxr-xr-x@ 1 matteogirardi  staff    535 Jan 17  2015 read_dims_array_bin.m
+-rwxr-xr-x@ 1 matteogirardi  staff    339 Jan 16  2015 view_text_file.m
+-rwxr-xr-x@ 1 matteogirardi  staff    176 Jan 14  2015 write_array_bin.m
+-rwxr-xr-x@ 1 matteogirardi  staff    515 Jan 17  2015 write_dims_array_bin.m
+-rwxr-xr-x@ 1 matteogirardi  staff   1059 Jan 15  2015 write_temp_precip_txt.m
+
+[num, txt, raw] = xlsread('Nashville_climate_data.xlsx')
+num =
+   46.0000   28.0000    3.9800
+   51.0000   31.0000    3.7000
+   61.0000   39.0000    4.8800
+   70.0000   47.0000    3.9400
+   78.0000   57.0000    5.0800
+   85.0000   65.0000    4.0900
+       NaN       NaN       NaN
+       NaN       NaN       NaN
+   89.0000   69.0000    3.7800
+   88.0000   68.0000    3.2700
+   82.0000   61.0000    3.5800
+   71.0000   49.0000    2.8700
+   59.0000   40.0000    4.4500
+   49.0000   31.0000    4.5300
+txt = 
+    'Climate Data for Na...'    ''         ''                 ''                ''           
+    '(Average highs, low...'    ''         ''                 ''                ''           
+    ''                          ''         ''                 ''                ''           
+    ''                          ''         'High temp (F)'    'Low temp (F)'    'Precip (in)'
+    ''                          'Jan'      ''                 ''                ''           
+    ''                          'Feb'      ''                 ''                ''           
+    ''                          'March'    ''                 ''                ''           
+    ''                          'April'    ''                 ''                ''           
+    ''                          'May'      ''                 ''                ''           
+    ''                          'June'     ''                 ''                ''           
+    ''                          ''         ''                 ''                ''           
+    ''                          ''         'High temp (F)'    'Low temp (F)'    'Precip (in)'
+    ''                          'July'     ''                 ''                ''           
+    ''                          'Aug'      ''                 ''                ''           
+    ''                          'Sep'      ''                 ''                ''           
+    ''                          'Oct'      ''                 ''                ''           
+    ''                          'Nov'      ''                 ''                ''           
+    ''                          'Dec'      ''                 ''                ''           
+raw = 
+    'Climate Data for Na...'    [  NaN]    [          NaN]    [         NaN]    [        NaN]
+    '(Average highs, low...'    [  NaN]    [          NaN]    [         NaN]    [        NaN]
+    [                   NaN]    [  NaN]    [          NaN]    [         NaN]    [        NaN]
+    [                   NaN]    [  NaN]    'High temp (F)'    'Low temp (F)'    'Precip (in)'
+    [                   NaN]    'Jan'      [           46]    [          28]    [     3.9800]
+    [                   NaN]    'Feb'      [           51]    [          31]    [     3.7000]
+    [                   NaN]    'March'    [           61]    [          39]    [     4.8800]
+    [                   NaN]    'April'    [           70]    [          47]    [     3.9400]
+    [                   NaN]    'May'      [           78]    [          57]    [     5.0800]
+    [                   NaN]    'June'     [           85]    [          65]    [     4.0900]
+    [                   NaN]    [  NaN]    [          NaN]    [         NaN]    [        NaN]
+    [                   NaN]    [  NaN]    'High temp (F)'    'Low temp (F)'    'Precip (in)'
+    [                   NaN]    'July'     [           89]    [          69]    [     3.7800]
+    [                   NaN]    'Aug'      [           88]    [          68]    [     3.2700]
+    [                   NaN]    'Sep'      [           82]    [          61]    [     3.5800]
+    [                   NaN]    'Oct'      [           71]    [          49]    [     2.8700]
+    [                   NaN]    'Nov'      [           59]    [          40]    [     4.4500]
+    [                   NaN]    'Dec'      [           49]    [          31]    [     4.5300]
+[num, txt, raw] = xlsread('Nashville_climate_data.xlsx')
+num =
+   46.0000   28.0000    3.9800
+   51.0000   31.0000    3.7000
+   61.0000   39.0000    4.8800
+   70.0000   47.0000    3.9400
+   78.0000   57.0000    5.0800
+   85.0000   65.0000    4.0900
+       NaN       NaN       NaN
+       NaN       NaN       NaN
+   89.0000   69.0000    3.7800
+   88.0000   68.0000    3.2700
+   82.0000   61.0000    3.5800
+   71.0000   49.0000    2.8700
+   59.0000   40.0000    4.4500
+   49.0000   31.0000    4.5300
+txt = 
+    'Climate Data for Na...'    ''         ''                 ''                ''           
+    '(Average highs, low...'    ''         ''                 ''                ''           
+    ''                          ''         ''                 ''                ''           
+    ''                          ''         'High temp (F)'    'Low temp (F)'    'Precip (in)'
+    ''                          'Jan'      ''                 ''                ''           
+    ''                          'Feb'      ''                 ''                ''           
+    ''                          'March'    ''                 ''                ''           
+    ''                          'April'    ''                 ''                ''           
+    ''                          'May'      ''                 ''                ''           
+    ''                          'June'     ''                 ''                ''           
+    ''                          ''         ''                 ''                ''           
+    ''                          ''         'High temp (F)'    'Low temp (F)'    'Precip (in)'
+    ''                          'July'     ''                 ''                ''           
+    ''                          'Aug'      ''                 ''                ''           
+    ''                          'Sep'      ''                 ''                ''           
+    ''                          'Oct'      ''                 ''                ''           
+    ''                          'Nov'      ''                 ''                ''           
+    ''                          'Dec'      ''                 ''                ''           
+raw = 
+    'Climate Data for Na...'    [  NaN]    [          NaN]    [         NaN]    [        NaN]
+    '(Average highs, low...'    [  NaN]    [          NaN]    [         NaN]    [        NaN]
+    [                   NaN]    [  NaN]    [          NaN]    [         NaN]    [        NaN]
+    [                   NaN]    [  NaN]    'High temp (F)'    'Low temp (F)'    'Precip (in)'
+    [                   NaN]    'Jan'      [           46]    [          28]    [     3.9800]
+    [                   NaN]    'Feb'      [           51]    [          31]    [     3.7000]
+    [                   NaN]    'March'    [           61]    [          39]    [     4.8800]
+    [                   NaN]    'April'    [           70]    [          47]    [     3.9400]
+    [                   NaN]    'May'      [           78]    [          57]    [     5.0800]
+    [                   NaN]    'June'     [           85]    [          65]    [     4.0900]
+    [                   NaN]    [  NaN]    [          NaN]    [         NaN]    [        NaN]
+    [                   NaN]    [  NaN]    'High temp (F)'    'Low temp (F)'    'Precip (in)'
+    [                   NaN]    'July'     [           89]    [          69]    [     3.7800]
+    [                   NaN]    'Aug'      [           88]    [          68]    [     3.2700]
+    [                   NaN]    'Sep'      [           82]    [          61]    [     3.5800]
+    [                   NaN]    'Oct'      [           71]    [          49]    [     2.8700]
+    [                   NaN]    'Nov'      [           59]    [          40]    [     4.4500]
+    [                   NaN]    'Dec'      [           49]    [          31]    [     4.5300]
+[~, raw] = xlsread('Nashville_climate_data.xlsx')
+raw = 
+    'Climate Data for Na...'    ''         ''                 ''                ''           
+    '(Average highs, low...'    ''         ''                 ''                ''           
+    ''                          ''         ''                 ''                ''           
+    ''                          ''         'High temp (F)'    'Low temp (F)'    'Precip (in)'
+    ''                          'Jan'      ''                 ''                ''           
+    ''                          'Feb'      ''                 ''                ''           
+    ''                          'March'    ''                 ''                ''           
+    ''                          'April'    ''                 ''                ''           
+    ''                          'May'      ''                 ''                ''           
+    ''                          'June'     ''                 ''                ''           
+    ''                          ''         ''                 ''                ''           
+    ''                          ''         'High temp (F)'    'Low temp (F)'    'Precip (in)'
+    ''                          'July'     ''                 ''                ''           
+    ''                          'Aug'      ''                 ''                ''           
+    ''                          'Sep'      ''                 ''                ''           
+    ''                          'Oct'      ''                 ''                ''           
+    ''                          'Nov'      ''                 ''                ''           
+    ''                          'Dec'      ''                 ''                ''           
+[~, ~, raw] = xlsread('Nashville_climate_data.xlsx')
+raw = 
+    'Climate Data for Na...'    [  NaN]    [          NaN]    [         NaN]    [        NaN]
+    '(Average highs, low...'    [  NaN]    [          NaN]    [         NaN]    [        NaN]
+    [                   NaN]    [  NaN]    [          NaN]    [         NaN]    [        NaN]
+    [                   NaN]    [  NaN]    'High temp (F)'    'Low temp (F)'    'Precip (in)'
+    [                   NaN]    'Jan'      [           46]    [          28]    [     3.9800]
+    [                   NaN]    'Feb'      [           51]    [          31]    [     3.7000]
+    [                   NaN]    'March'    [           61]    [          39]    [     4.8800]
+    [                   NaN]    'April'    [           70]    [          47]    [     3.9400]
+    [                   NaN]    'May'      [           78]    [          57]    [     5.0800]
+    [                   NaN]    'June'     [           85]    [          65]    [     4.0900]
+    [                   NaN]    [  NaN]    [          NaN]    [         NaN]    [        NaN]
+    [                   NaN]    [  NaN]    'High temp (F)'    'Low temp (F)'    'Precip (in)'
+    [                   NaN]    'July'     [           89]    [          69]    [     3.7800]
+    [                   NaN]    'Aug'      [           88]    [          68]    [     3.2700]
+    [                   NaN]    'Sep'      [           82]    [          61]    [     3.5800]
+    [                   NaN]    'Oct'      [           71]    [          49]    [     2.8700]
+    [                   NaN]    'Nov'      [           59]    [          40]    [     4.4500]
+    [                   NaN]    'Dec'      [           49]    [          31]    [     4.5300]
+singlecell = xlsread('Nashville_climate_data.xlsx',1,'D15')
+singlecell =
+    61
+singlecell = xlsread('Nashville_climate_data.xlsx',1,'D15:E17')
+singlecell =
+   61.0000    3.5800
+   49.0000    2.8700
+   40.0000    4.4500
+[num] = xlsread('Nashville_climate_data.xlsx')
+num =
+   46.0000   28.0000    3.9800
+   51.0000   31.0000    3.7000
+   61.0000   39.0000    4.8800
+   70.0000   47.0000    3.9400
+   78.0000   57.0000    5.0800
+   85.0000   65.0000    4.0900
+       NaN       NaN       NaN
+       NaN       NaN       NaN
+   89.0000   69.0000    3.7800
+   88.0000   68.0000    3.2700
+   82.0000   61.0000    3.5800
+   71.0000   49.0000    2.8700
+   59.0000   40.0000    4.4500
+   49.0000   31.0000    4.5300
+singlecell = xlsread('Nashville_climate_data.xlsx',1,'D15')
+singlecell =
+    61
+singlecell = xlsread('Nashville_climate_data.xlsx',1,'D16')
+singlecell =
+    49
+ls -l
+total 104
+-rwxr-xr-x@ 1 matteogirardi  staff    431 Jan 15  2015 Climate.txt
+-rwxr-xr-x@ 1 matteogirardi  staff  10913 Jul 26  2012 Nashville_climate_data.xlsx
+-rwxr-xr-x@ 1 matteogirardi  staff    185 Aug 30  2012 append_array_bin.m
+-rwxr-xr-x@ 1 matteogirardi  staff    328 Sep  6  2012 custom_read_bin.m
+-rwxr-xr-x@ 1 matteogirardi  staff    357 Sep  6  2012 custom_write_bin.m
+-rwxr-xr-x@ 1 matteogirardi  staff      0 Jan 16  2015 numestr.m
+-rwxr-xr-x@ 1 matteogirardi  staff    188 Jan 16  2015 read_bin_file.m
+-rwxr-xr-x@ 1 matteogirardi  staff    535 Jan 17  2015 read_dims_array_bin.m
+-rwxr-xr-x@ 1 matteogirardi  staff    339 Jan 16  2015 view_text_file.m
+-rwxr-xr-x@ 1 matteogirardi  staff    176 Jan 14  2015 write_array_bin.m
+-rwxr-xr-x@ 1 matteogirardi  staff    515 Jan 17  2015 write_dims_array_bin.m
+-rwxr-xr-x@ 1 matteogirardi  staff   1059 Jan 15  2015 write_temp_precip_txt.m
+
+help xlswrite
+  <strong>xlswrite</strong> Write to Microsoft Excel spreadsheet file.
+    <strong>xlswrite</strong>(FILE,ARRAY) writes ARRAY to the first worksheet in the Excel
+    file named FILE, starting at cell A1.
+ 
+    <strong>xlswrite</strong>(FILE,ARRAY,SHEET) writes to the specified worksheet.
+ 
+    <strong>xlswrite</strong>(FILE,ARRAY,RANGE) writes to the rectangular region
+    specified by RANGE in the first worksheet of the file. Specify RANGE
+    using the syntax 'C1:C2', where C1 and C2 are opposing corners of the
+    region.
+ 
+    <strong>xlswrite</strong>(FILE,ARRAY,SHEET,RANGE) writes to the specified SHEET and
+    RANGE.
+ 
+    STATUS = <strong>xlswrite</strong>(FILE,ARRAY,SHEET,RANGE) returns the completion
+    status of the write operation: TRUE (logical 1) for success, FALSE
+    (logical 0) for failure.  Inputs SHEET and RANGE are optional.
+ 
+    [STATUS,MESSAGE] = <strong>xlswrite</strong>(FILE,ARRAY,SHEET,RANGE) returns any warning
+    or error messages generated by the write operation in structure
+    MESSAGE. The structure contains two fields: 'message' and 'identifier'.
+    Inputs SHEET and RANGE are optional.
+ 
+    Input Arguments:
+ 
+    FILE    String that specifies the file to write. If the file does not
+            exist, <strong>xlswrite</strong> creates a file, determining the format based on
+            the specified extension. To create a file compatible with Excel
+            97-2003 software, specify an extension of '.xls'. To create
+            files in Excel 2007 or later formats, specify an extension of
+            '.xlsx', '.xlsb', or '.xlsm'. If you do not specify an 
+            extension, <strong>xlswrite</strong> applies '.xls'.
+    ARRAY   Two-dimensional numeric or character array or, if each cell
+            contains a single element, a cell array.
+    SHEET   Worksheet to write. One of the following:
+            * String that contains the worksheet name.
+            * Positive, integer-valued scalar indicating the worksheet
+              index.
+            If SHEET does not exist, <strong>xlswrite</strong> adds a new sheet at the end
+            of the worksheet collection. If SHEET is an index larger than
+            the number of worksheets, <strong>xlswrite</strong> appends new sheets until the
+            number of worksheets in the workbook equals SHEET.
+    RANGE   String that specifies a rectangular portion of the worksheet to
+            read. Not case sensitive. Use Excel A1 reference style.
+            * If you specify a SHEET, RANGE can either fit the size of
+              ARRAY or specify only the first cell (such as 'D2').
+            * If you do not specify a SHEET, RANGE must include both 
+              corners and a colon character (:), even for a single cell
+              (such as 'D2:D2').
+            * If RANGE is larger than the size of ARRAY, Excel fills the
+              remainder of the region with #N/A. If RANGE is smaller than
+              the size of ARRAY, <strong>xlswrite</strong> writes only the subset that fits
+              into RANGE to the file.
+ 
+    Notes:
+ 
+    * If your system does not have Excel for Windows, or if the COM server
+      (part of the typical installation of Excel) is unavailable, <strong>xlswrite</strong>:
+         * Writes ARRAY to a text file in comma-separated value (CSV) format.
+         * Ignores SHEET and RANGE arguments.
+         * Generates an error when ARRAY is a cell array.
+ 
+    * Excel converts Inf values to 65535. <strong>xlswrite</strong> converts NaN values to
+      empty cells.
+ 
+    Examples:
+ 
+    % Write a 7-element vector to testdata.xls:
+    xlswrite('testdata.xls', [12.7, 5.02, -98, 63.9, 0, -.2, 56])
+ 
+    % Write mixed text and numeric data to testdata2.xls
+    % starting at cell E1 of Sheet1:
+    d = {'Time','Temperature'; 12,98; 13,99; 14,97};
+    xlswrite('testdata2.xls', d, 1, 'E1')
+ 
+  See also <a href="matlab:help xlsread">xlsread</a>, <a href="matlab:help xlsfinfo">xlsfinfo</a>, <a href="matlab:help dlmwrite">dlmwrite</a>.
+ 
+
+    Reference page in Help browser
+       <a href="matlab:doc xlswrite">doc xlswrite</a>
+
+write_temp_precip_txt
+{Error using <a href="matlab:helpUtils.errorDocCallback('write_temp_precip_txt', '/Users/matteogirardi/Dropbox/coding/matlab/lesson08/Lesson_8_Examples/write_temp_precip_txt.m', 23)" style="font-weight:bold">write_temp_precip_txt</a> (<a href="matlab: opentoline('/Users/matteogirardi/Dropbox/coding/matlab/lesson08/Lesson_8_Examples/write_temp_precip_txt.m',23,0)">line 23</a>)
+Not enough input arguments.} 
+write_temp_precip_txt('Climate02.txt
+ write_temp_precip_txt('Climate02.txt
+                       |
+{Error: String is not terminated properly.
+} 
+write_temp_precip_txt('Climate02.txt')
+view_text_file('Climate.txt')
+Climate Data for Nashville, TN
+(Average highs (F), lows (F), and precip (in)
+
+        High  Low  Precip
+  Jan: 46.00,28.00, 3.98
+  Feb: 51.00,31.00, 3.70
+March: 61.00,39.00, 4.88
+April: 70.00,47.00, 3.94
+  May: 78.00,57.00, 5.08
+ June: 85.00,65.00, 4.09
+
+        High  Low  Precip
+ July: 89.00,69.00, 3.78
+  Aug: 88.00,68.00, 3.27
+  Sep: 82.00,61.00, 3.58
+  Oct: 71.00,49.00, 2.87
+  Nov: 59.00,40.00, 4.45
+  Dec: 49.00,31.00, 4.53
+
+rng(0);
+Data = randn(10,12)
+Data =
+  Columns 1 through 6
+    0.5377   -1.3499    0.6715    0.8884   -0.1022   -0.8637
+    1.8339    3.0349   -1.2075   -1.1471   -0.2414    0.0774
+   -2.2588    0.7254    0.7172   -1.0689    0.3192   -1.2141
+    0.8622   -0.0631    1.6302   -0.8095    0.3129   -1.1135
+    0.3188    0.7147    0.4889   -2.9443   -0.8649   -0.0068
+   -1.3077   -0.2050    1.0347    1.4384   -0.0301    1.5326
+   -0.4336   -0.1241    0.7269    0.3252   -0.1649   -0.7697
+    0.3426    1.4897   -0.3034   -0.7549    0.6277    0.3714
+    3.5784    1.4090    0.2939    1.3703    1.0933   -0.2256
+    2.7694    1.4172   -0.7873   -1.7115    1.1093    1.1174
+  Columns 7 through 12
+   -1.0891   -0.6156    1.4193   -1.1480    0.8404   -2.1384
+    0.0326    0.7481    0.2916    0.1049   -0.8880   -0.8396
+    0.5525   -0.1924    0.1978    0.7223    0.1001    1.3546
+    1.1006    0.8886    1.5877    2.5855   -0.5445   -1.0722
+    1.5442   -0.7648   -0.8045   -0.6669    0.3035    0.9610
+    0.0859   -1.4023    0.6966    0.1873   -0.6003    0.1240
+   -1.4916   -1.4224    0.8351   -0.0825    0.4900    1.4367
+   -0.7423    0.4882   -0.2437   -1.9330    0.7394   -1.9609
+   -1.0616   -0.1774    0.2157   -0.4390    1.7119   -0.1977
+    2.3505   -0.1961   -1.1658   -1.7947   -0.1941   -1.2078
+write_array_bin(Data,'datafile.dat')
+view_text_file('datafile.dat')
+4?P$W?vM?SRf?J +?9!@~'@PT#NG@6?3:]$e,?S<[(?g??|?zQMx?;;q?C	J?A?zB?T|kE?k1	m?um:/fZ/Vi0??^5o_(rw)?X
+_bB3,;Xm?,"5?&vYQu+-?e$~?RGy[?D1>t.?=mSL'XA
+|[?l`i?h?l7_?j%M?nu?T?)Y.?3jVY> =]@C4>?Mu+!!o?--y8o+B=>?e~f:3G?~~??YQ?WbQ?=5)7g?c/iuIJ?3q
+?-O2/?I_Kj^Nw?|?	@Hp+W4v?Zljip$~-)9[?1Aj_? Al1{l?5p[?w?Z>qc?>
+ZZ|8]"k?>M'pT"?&J??_,NNUS
+X = read_bin_file('filedata.dat','double');
+{Error using <a href="matlab:helpUtils.errorDocCallback('read_bin_file', '/Users/matteogirardi/Dropbox/coding/matlab/lesson08/Lesson_8_Examples/read_bin_file.m', 4)" style="font-weight:bold">read_bin_file</a> (<a href="matlab: opentoline('/Users/matteogirardi/Dropbox/coding/matlab/lesson08/Lesson_8_Examples/read_bin_file.m',4,0)">line 4</a>)
+error opening file filedata.dat
+} 
+X = read_bin_file('datafile.dat','double');
+whos
+  Name              Size            Bytes  Class     Attributes
+
+  Data             10x12              960  double              
+  X               120x1               960  double              
+  ans               1x53              106  char                
+  contents          1x54              108  char                
+  num              14x3               336  double              
+  raw              18x5             11008  cell                
+  singlecell        1x1                 8  double              
+  txt              18x5             10448  cell                
+
+write_dims_array_bin(Data,'dims_array.dat');
+Y = read_dims_array_bin('dims_array.dat');
+whos
+  Name              Size            Bytes  Class     Attributes
+
+  Data             10x12              960  double              
+  X               120x1               960  double              
+  Y                10x12              960  double              
+  ans               1x53              106  char                
+  contents          1x54              108  char                
+  num              14x3               336  double              
+  raw              18x5             11008  cell                
+  singlecell        1x1                 8  double              
+  txt              18x5             10448  cell                
+
+isequal(Data,Y)
+ans =
+     1
+help write_dims_array_bin
+ <strong>write_dims_array_bin</strong>   Write dimensioned array in binary
+    <strong>write_dims_array_bin</strong>(A,'FNAME') writes the number of
+    dimensions of A, then a list of the dimensions, 
+    and then the elements of A into the file named
+    'fname', encoded as a doubles.
+
+help read_dims_array_bin
+ <strong>read_dims_array_bin</strong>   Read dimensioned array in binary
+    A = <strong>read_dims_array_bin</strong>('FNAME',N) reads from 
+    a file of doubles named 'fname' into an array. The 
+    file must contain the number of dimensions of the 
+    array, then the dimensions, and then the elements.
+
+view_text_file('dims_array.dat')
+       @      $@      (@4?P$W?vM?SRf?J +?9!@~'@PT#NG@6?3:]$e,?S<[(?g??|?zQMx?;;q?C	J?A?zB?T|kE?k1	m?um:/fZ/Vi0??^5o_(rw)?X
+_bB3,;Xm?,"5?&vYQu+-?e$~?RGy[?D1>t.?=mSL'XA
+|[?l`i?h?l7_?j%M?nu?T?)Y.?3jVY> =]@C4>?Mu+!!o?--y8o+B=>?e~f:3G?~~??YQ?WbQ?=5)7g?c/iuIJ?3q
+?-O2/?I_Kj^Nw?|?	@Hp+W4v?Zljip$~-)9[?1Aj_? Al1{l?5p[?w?Z>qc?>
+ZZ|8]"k?>M'pT"?&J??_,NNUS
+Beta = randn(6,2,5);
+write_dims_array_bin(Beta,'betafile.dat');
+B = read_dims_array_bin('betafile.dat');
+whos
+  Name              Size             Bytes  Class      Attributes
+
+  B                 6x2x5              480  double               
+  Beta              6x2x5              480  double               
+  Data             10x12               960  double               
+  X               120x1                960  double               
+  Y                10x12               960  double               
+  ans               1x1                  1  logical              
+  contents          1x54               108  char                 
+  num              14x3                336  double               
+  raw              18x5              11008  cell                 
+  singlecell        1x1                  8  double               
+  txt              18x5              10448  cell                 
+
+isequal(B,Beta)
+ans =
+     1
+edit num2str
+edit sparse_array_out
+hw8
+Homework 8 Grader
+
+Type the number of the problem that you would like to check
+or choose the last option to check all problems and compute
+a score and a submission code. (Nothing is submitted.)
+
+ 0. EXIT
+ 1. sparse_array_out
+ 2. sparse_array_in
+ 3. letter_counter
+ 4. saddle
+ 5. prime_pairs
+ 6. maxsubsum
+ 7. queen_check
+ 8. bell
+ 9. roman2
+10. bowl
+11. ALL PROBLEMS (gives score and submission code)
+
+Your selection: 1
+NOTE: the grader will only determine if your
+solution for Problem 1 is correct or not.
+No score will be given.
+
+Problem 1 (sparse_array_out):
+
+    Your solution is _not_ correct.
+
+diary off;

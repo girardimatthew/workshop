@@ -1,0 +1,7 @@
+.DS_STORE
+*.o
+*.pd_darwin
+*.out
+*.pdf
+.*
+!/.gitignore

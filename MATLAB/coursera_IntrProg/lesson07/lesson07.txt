@@ -1,0 +1,960 @@
+diary on;
+diary off;
+x = 23
+x =
+    23
+class(x)
+ans =
+double
+class(0)
+ans =
+double
+class(3)
+ans =
+double
+class(100)
+ans =
+double
+class(sqrt(-1))
+ans =
+double
+y = 1:8
+y =
+     1     2     3     4     5     6     7     8
+rng(0); z = rand(3,4)
+z =
+    0.8147    0.9134    0.2785    0.9649
+    0.9058    0.6324    0.5469    0.1576
+    0.1270    0.0975    0.9575    0.9706
+whos
+  Name      Size            Bytes  Class     Attributes
+
+  ans       1x6                12  char                
+  x         1x1                 8  double              
+  y         1x8                64  double              
+  z         3x4                96  double              
+
+ans
+ans =
+double
+class('Sup?')
+ans =
+char
+class(3>4)
+ans =
+logical
+2^7
+ans =
+   128
+2^15
+ans =
+       32768
+2^31
+ans =
+   2.1475e+09
+2^8
+ans =
+   256
+0/0
+ans =
+   NaN
+3/0
+ans =
+   Inf
+isa(4,'double')
+ans =
+     1
+intmax('int64')
+ans =
+  9223372036854775807
+intmax('int32')
+ans =
+  2147483647
+intmax('int8')
+ans =
+  127
+2^8
+ans =
+   256
+intmax('int16')
+ans =
+  32767
+intmax('char')
+{Error using <a href="matlab:helpUtils.errorDocCallback('intmax', '/Applications/MATLAB_R2014a.app/toolbox/matlab/elmat/intmax.m', 40)" style="font-weight:bold">intmax</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2014a.app/toolbox/matlab/elmat/intmax.m',40,0)">line 40</a>)
+Invalid class name.} 
+intmax('logical')
+{Error using <a href="matlab:helpUtils.errorDocCallback('intmax', '/Applications/MATLAB_R2014a.app/toolbox/matlab/elmat/intmax.m', 40)" style="font-weight:bold">intmax</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2014a.app/toolbox/matlab/elmat/intmax.m',40,0)">line 40</a>)
+Invalid class name.} 
+intmin('int16')
+ans =
+ -32768
+intmin('int8')
+ans =
+ -128
+intmin('int32')
+ans =
+ -2147483648
+intmin('int64')
+ans =
+ -9223372036854775808
+realmax
+ans =
+  1.7977e+308
+2^38
+ans =
+   2.7488e+11
+x = single(98.76)
+x =
+   98.7600
+n = int8(-16)
+n =
+  -16
+m = uint16(1234)
+m =
+   1234
+whos
+  Name      Size            Bytes  Class     Attributes
+
+  ans       1x1                 8  double              
+  m         1x1                 2  uint16              
+  n         1x1                 1  int8                
+  x         1x1                 4  single              
+  y         1x8                64  double              
+  z         3x4                96  double              
+
+k = uint8(500)
+k =
+  255
+k = uint8(256)
+k =
+  255
+k = uint8(-1)
+k =
+    0
+2^8
+ans =
+   256
+2^16
+ans =
+       65536
+k = uint16(65536)
+k =
+  65535
+k = int16(65536)
+k =
+  32767
+k = int16(-65536)
+k =
+ -32768
+class(k)
+ans =
+int16
+k = uint16(65536)
+k =
+  65535
+class(k)
+ans =
+uint16
+k = 2;
+class(k)
+ans =
+double
+K = 'It makes sense.'
+K =
+It makes sense.
+k = 'It makes sense.'
+k =
+It makes sense.
+class(k)
+ans =
+char
+intmax('unit8')
+{Error using <a href="matlab:helpUtils.errorDocCallback('intmax', '/Applications/MATLAB_R2014a.app/toolbox/matlab/elmat/intmax.m', 40)" style="font-weight:bold">intmax</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2014a.app/toolbox/matlab/elmat/intmax.m',40,0)">line 40</a>)
+Invalid class name.} 
+intmax('uint8')
+ans =
+  255
+intmin('uint8')
+ans =
+    0
+intmin('uint32')
+ans =
+           0
+intmin('int32')
+ans =
+ -2147483648
+realmax('double')
+ans =
+  1.7977e+308
+realsingle('double')
+{Undefined function 'realsingle' for input arguments of type 'char'.} 
+realmin('single')
+ans =
+  1.1755e-38
+intmax('int32')
+ans =
+  2147483647
+intmax('uint32')
+ans =
+  4294967295
+intmin('uint32')
+ans =
+           0
+realmin('double')
+ans =
+  2.2251e-308
+realmin('single')
+ans =
+  1.1755e-38
+realmax('single')
+ans =
+  3.4028e+38
+edit char_codes
+char_codes
+!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+char_codes
+!
+"
+#
+$
+%
+&
+'
+(
+)
+*
++
+,
+-
+.
+/
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+:
+;
+<
+=
+>
+?
+@
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+[
+\
+]
+^
+_
+`
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+k
+l
+m
+n
+o
+p
+q
+r
+s
+t
+u
+v
+w
+x
+y
+z
+{
+|
+}
+~
+char_codes
+!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+edit char_codes02
+char_codes02
+!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+char_codes02
+!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+MOOC_title = 'MATLAB for Smarties'
+MOOC_title =
+MATLAB for Smarties
+length(MOOC_title)
+ans =
+    19
+MOOC_title(1)
+ans =
+M
+MOOC_title(1:6)
+ans =
+MATLAB
+MOOC_title(end-8:end)
+ans =
+ Smarties
+MOOC_title(:)
+ans =
+M
+A
+T
+L
+A
+B
+ 
+f
+o
+r
+ 
+S
+m
+a
+r
+t
+i
+e
+s
+txt1 = 'colonel'
+txt1 =
+colonel
+txt2 = 'kernel'
+txt2 =
+kernel
+txt1 == txt2
+{Error using <a href="matlab:helpUtils.errorDocCallback('eq')" style="font-weight:bold"> == </a>
+Matrix dimensions must agree.} 
+a = MOOC_title(1:6)
+a =
+MATLAB
+b = a(end:-1:1)
+b =
+BALTAM
+a == b
+ans =
+     0     1     0     0     1     0
+message = 'Let'' skip class today!'
+message =
+Let' skip class today!
+code = double(message)
+code =
+  Columns 1 through 11
+    76   101   116    39    32   115   107   105   112    32    99
+  Columns 12 through 22
+   108    97   115   115    32   116   111   100    97   121    33
+code = double(message)
+code =
+  Columns 1 through 16
+    76   101   116    39    32   115   107   105   112    32    99   108    97   115   115    32
+  Columns 17 through 22
+   116   111   100    97   121    33
+secret = char(code + 3)
+secret =
+Ohw*#vnls#fodvv#wrgd|$
+length(messasge)
+{Undefined function or variable 'messasge'.} 
+length(message)
+ans =
+    22
+length(secret)
+ans =
+    22
+char(secret - 3)
+ans =
+Let' skip class today!
+friends = ['Bill'; 'Mary'; 'John']
+friends =
+Bill
+Mary
+John
+size(friends)
+ans =
+     3     4
+freinds_2 = ['ciccio'; 'ciccio2']
+{Error using <a href="matlab:helpUtils.errorDocCallback('vertcat')" style="font-weight:bold">vertcat</a>
+Dimensions of matrices being concatenated are not consistent.} 
+line1 = '12345678'
+line1 =
+12345678
+line2 = 'abcdefgh'
+line2 =
+abcdefgh
+txt = [line1; line2]
+txt =
+12345678
+abcdefgh
+txt'
+ans =
+1a
+2b
+3c
+4d
+5e
+6f
+7g
+8h
+pome = ['TIGER, tiger, burning bright'; 'In the forest of the night']
+{Error using <a href="matlab:helpUtils.errorDocCallback('vertcat')" style="font-weight:bold">vertcat</a>
+Dimensions of matrices being concatenated are not consistent.} 
+num2str(123)
+ans =
+123
+class(num2str(123))
+ans =
+char
+MOOC_title
+MOOC_title =
+MATLAB for Smarties
+strfind(MOOC_title,'LAB')
+ans =
+     4
+strfind(MOOC_title,'lab')
+ans =
+     []
+strfind('Team','I')
+ans =
+     []
+strfind(MOOC_title,'r')
+ans =
+    10    15
+MOOC_title
+MOOC_title =
+MATLAB for Smarties
+lang = 'MATLAB'
+lang =
+MATLAB
+strcmp(MOOC_title, lang)
+ans =
+     0
+strcmp(MOOC_title(1:6), lang)
+ans =
+     1
+MOOC_title
+MOOC_title =
+MATLAB for Smarties
+strcmpi(MOOC_title(1:6), 'Matlab')
+ans =
+     1
+lower('MATHWORKS')
+ans =
+mathworks
+upper('attention!')
+ans =
+ATTENTION!
+pi_number = 3.1416
+pi_number =
+    3.1416
+pi_digits = '3.1416'
+pi_digits =
+3.1416
+size(pi_number)
+ans =
+     1     1
+size(pi_digits)
+ans =
+     1     6
+class(pi_number)
+ans =
+double
+class(pi_digits)
+ans =
+char
+pi_number + 1
+ans =
+    4.1416
+pi_digits + 1
+ans =
+    52    47    50    53    50    55
+char(pi_digits + 1)
+ans =
+4/2527
+double(pi_digits + 1)
+ans =
+    52    47    50    53    50    55
+double(pi_digits)
+ans =
+    51    46    49    52    49    54
+str2num(pi_digits)
+ans =
+    3.1416
+str2num(pi_digits) + 1
+ans =
+    4.1416
+num2str(pi_number)
+ans =
+3.1416
+ans + 1
+ans =
+    52    47    50    53    50    55
+r = 12
+r =
+    12
+fprintf('The area of a circle with radius %.2f is %.2f!\n',r,pi*r^2)
+The area of a circle with radius 12.00 is 452.39!
+sprintf('The area of a circle with radius %.2f is %.2f!\n',r,pi*r^2)
+ans =
+The area of a circle with radius 12.00 is 452.39!
+
+fprintf('The area of a circle with radius %.2f is %.2f!\n',r,pi*r^2);
+The area of a circle with radius 12.00 is 452.39!
+sprintf('The area of a circle with radius %.2f is %.2f!\n',r,pi*r^2);
+str = sprintf('The area of a circle with radius %.2f is %.2f!\n',r,pi*r^2);
+str = sprintf('The area of a circle with radius %.2f is %.2f!\n',r,pi*r^2)
+str =
+The area of a circle with radius 12.00 is 452.39!
+
+str
+str =
+The area of a circle with radius 12.00 is 452.39!
+
+class(str)
+ans =
+char
+r.ssn = 12345678
+[Warning: Struct field assignment overwrites a value with class "double". See MATLAB R14SP2 Release
+Notes, Assigning Nonstructure Variables As Structures Displays Warning, for details.] 
+r = 
+    ssn: 12345678
+class(r)
+ans =
+struct
+class(r.ssn)
+ans =
+double
+r.name = 'Homer Simpson'
+r = 
+     ssn: 12345678
+    name: 'Homer Simpson'
+size(r)
+ans =
+     1     1
+r.address.street = '742 Evergreen Terrace'
+r = 
+        ssn: 12345678
+       name: 'Homer Simpson'
+    address: [1x1 struct]
+account.number = 12345678
+account = 
+    number: 12345678
+account.balance = 5000
+account = 
+     number: 12345678
+    balance: 5000
+account.owner.name = 'Joe Smith'
+account = 
+     number: 12345678
+    balance: 5000
+      owner: [1x1 struct]
+account.owner.email = 'joe@matlabmooc.com'
+account = 
+     number: 12345678
+    balance: 5000
+      owner: [1x1 struct]
+class(struct)
+ans =
+struct
+class(account)
+ans =
+struct
+class(account.number)
+ans =
+double
+class(account.balance)
+ans =
+double
+account.owner
+ans = 
+     name: 'Joe Smith'
+    email: 'joe@matlabmooc.com'
+whos
+  Name            Size            Bytes  Class     Attributes
+
+  K               1x15               30  char                
+  MOOC_title      1x19               38  char                
+  a               1x6                12  char                
+  account         1x1               950  struct              
+  ans             1x1               406  struct              
+  b               1x6                12  char                
+  code            1x22              176  double              
+  friends         3x4                24  char                
+  k               1x15               30  char                
+  lang            1x6                12  char                
+  line1           1x8                16  char                
+  line2           1x8                16  char                
+  m               1x1                 2  uint16              
+  message         1x22               44  char                
+  n               1x1                 1  int8                
+  pi_digits       1x6                12  char                
+  pi_number       1x1                 8  double              
+  r               1x1               780  struct              
+  secret          1x22               44  char                
+  str             1x50              100  char                
+  txt             2x8                32  char                
+  txt1            1x7                14  char                
+  txt2            1x6                12  char                
+  x               1x1                 4  single              
+  y               1x8                64  double              
+  z               3x4                96  double              
+
+account(2).number = 7654321
+account = 
+1x2 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+    number
+    balance
+    owner
+account
+account = 
+1x2 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+    number
+    balance
+    owner
+account.number
+ans =
+    12345678
+ans =
+     7654321
+account(1).number
+ans =
+    12345678
+account(2).number
+ans =
+     7654321
+account.balance
+ans =
+        5000
+ans =
+     []
+account.owner
+ans = 
+     name: 'Joe Smith'
+    email: 'joe@matlabmooc.com'
+ans =
+     []
+account(1)
+ans = 
+     number: 12345678
+    balance: 5000
+      owner: [1x1 struct]
+account(2)
+ans = 
+     number: 7654321
+    balance: []
+      owner: []
+account(2).owner
+ans =
+     []
+account(2).balance
+ans =
+     []
+account(2).balance = 1000
+account = 
+1x2 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+    number
+    balance
+    owner
+account(2).owner.name = 'Jane Farmer'
+account = 
+1x2 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+    number
+    balance
+    owner
+account(1)
+ans = 
+     number: 12345678
+    balance: 5000
+      owner: [1x1 struct]
+account(2)
+ans = 
+     number: 7654321
+    balance: 1000
+      owner: [1x1 struct]
+account(1).owner
+ans = 
+     name: 'Joe Smith'
+    email: 'joe@matlabmooc.com'
+account(2).owner
+ans = 
+    name: 'Jane Farmer'
+account.owner
+ans = 
+     name: 'Joe Smith'
+    email: 'joe@matlabmooc.com'
+ans = 
+    name: 'Jane Farmer'
+account(2).owner.name
+ans =
+Jane Farmer
+account(2).owner.email
+{Reference to non-existent field 'email'.} 
+account(1)
+ans = 
+     number: 12345678
+    balance: 5000
+      owner: [1x1 struct]
+account(2)
+ans = 
+     number: 7654321
+    balance: 1000
+      owner: [1x1 struct]
+account(2).owner.name
+ans =
+Jane Farmer
+account(1).owner.name
+ans =
+Joe Smith
+length(account(1).owner.name)
+ans =
+     9
+length(account(2).owner.name)
+ans =
+    11
+account(1).owner.age = 23
+account = 
+1x2 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+    number
+    balance
+    owner
+account(1).owner
+ans = 
+     name: 'Joe Smith'
+    email: 'joe@matlabmooc.com'
+      age: 23
+account(2).owner
+ans = 
+    name: 'Jane Farmer'
+account(1).owner.age
+ans =
+    23
+account(2).owner.age
+{Reference to non-existent field 'age'.} 
+account(1:2).owner
+ans = 
+     name: 'Joe Smith'
+    email: 'joe@matlabmooc.com'
+      age: 23
+ans = 
+    name: 'Jane Farmer'
+isfield(account(2).owner,'age')
+ans =
+     0
+isfield(account(1).owner,'age')
+ans =
+     1
+rmfield(account(1).owner,'age')
+ans = 
+     name: 'Joe Smith'
+    email: 'joe@matlabmooc.com'
+account(1).owner
+ans = 
+     name: 'Joe Smith'
+    email: 'joe@matlabmooc.com'
+      age: 23
+account(1).owner = rmfield(account(1).owner,'age')
+account = 
+1x2 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+    number
+    balance
+    owner
+account(1).owner
+ans = 
+     name: 'Joe Smith'
+    email: 'joe@matlabmooc.com'
+course = struct('Area','CS','number',103,'title','Introductory Programming for Engineers and Scientists')
+course = 
+      Area: 'CS'
+    number: 103
+     title: 'Introductory Programming for Engineers and Scientists'
+clc;clear all;
+whos
+  Name      Size            Bytes  Class    Attributes
+
+  page      1x5               982  cell               
+
+page
+page = 
+    'You could find him ...'    'Tall, dark hair, an...'    'They say he pulled ...'    'And when he'd stick...'    'On Big John.'
+page{1}
+ans =
+You could find him on the field almost any day.
+page{2}
+ans =
+Tall, dark hair, and eyes of steel gray.
+page{3}
+ans =
+They say he pulled a Frisbee 'bout half a mile,
+page{4}
+ans =
+And when he'd stick in the corner, you could almost catch a smile
+page{5}
+ans =
+On Big John.
+class(page)
+ans =
+cell
+class(page{1})
+ans =
+char
+size(page{1})
+ans =
+     1    47
+size(page{2})
+ans =
+     1    40
+size(page{3})
+ans =
+     1    47
+size(page{4})
+ans =
+     1    65
+length(page)
+ans =
+     5
+
+You could find him on the field almost any day.
+Tall, dark hair, and eyes of steel gray.
+They say he pulled a Frisbee 'bout half a mile,
+And when he'd stick in the corner, you could almost catch a smile
+On Big John.
+
+p = cell(2,3)
+p = 
+    []    []    []
+    []    []    []
+p{2,1} = pi
+p = 
+          []    []    []
+    [3.1416]    []    []
+p
+p = 
+          []    []    []
+    [3.1416]    []    []
+p{1,1} = int8(-17)
+p = 
+    [   -17]    []    []
+    [3.1416]    []    []
+p{2,2} = 'Awesome'
+p = 
+    [   -17]           []    []
+    [3.1416]    'Awesome'    []
+p{2,3} = [2 4; 6 8; 10 12]
+p = 
+    [   -17]           []              []
+    [3.1416]    'Awesome'    [3x2 double]
+p{1,3} = sum(p{2,3})
+p = 
+    [   -17]           []    [1x2 double]
+    [3.1416]    'Awesome'    [3x2 double]
+p
+p = 
+    [   -17]           []    [1x2 double]
+    [3.1416]    'Awesome'    [3x2 double]
+p{1,3}
+ans =
+    18    24
+p{1,2} = 1/0
+p = 
+    [   -17]    [    Inf]    [1x2 double]
+    [3.1416]    'Awesome'    [3x2 double]
+class(p)
+ans =
+cell
+class(p{1,2})
+ans =
+double
+class(p(1,2))
+ans =
+cell
+p{2,3}(2,3)
+{Index exceeds matrix dimensions.} 
+p{2,3}(3,2)
+ans =
+    12
+c{1} = pi
+c = 
+    [3.1416]
+c{2} = 'Cell or not cell?'
+c = 
+    [3.1416]    'Cell or not cell?'
+c{2}
+ans =
+Cell or not cell?
+c{3}
+{Index exceeds matrix dimensions.} 
+c{1}
+ans =
+    3.1416
+c(1)
+ans = 
+    [3.1416]
+c(2)
+ans = 
+    'Cell or not cell?'
+c1 = {[1 2], [10,20]}
+c1 = 
+    [1x2 double]    [1x2 double]
+c2 = c1
+c2 = 
+    [1x2 double]    [1x2 double]
+c2
+c2 = 
+    [1x2 double]    [1x2 double]
+c1{1,1}
+ans =
+     1     2
+c2{1,1}
+ans =
+     1     2
+c1{1,2}
+ans =
+    10    20
+c2{1,2}
+ans =
+    10    20
+c1{1,1} = 'strawberries'
+c1 = 
+    'strawberries'    [1x2 double]
+c2{1,1}
+ans =
+     1     2
+c1{1,1}
+ans =
+strawberries
+diary off;
+
+33:! - 34:" - 35:# - 36:$ - 37:% - 38:& - 39:' - 40:( - 41:) - 42:* - 43:+ - 44:, - 45:- - 46:. - 47:/ - 48:0 - 49:1 - 50:2 - 51:3 - 52:4 - 53:5 - 54:6 - 55:7 - 56:8 - 57:9 - 58:: - 59:; - 60:< - 61:= - 62:> - 63:? - 64:@ - 65:A - 66:B - 67:C - 68:D - 69:E - 70:F - 71:G - 72:H - 73:I - 74:J - 75:K - 76:L - 77:M - 78:N - 79:O - 80:P - 81:Q - 82:R - 83:S - 84:T - 85:U - 86:V - 87:W - 88:X - 89:Y - 90:Z - 91:[ - 92:\ - 93:] - 94:^ - 95:_ - 96:` - 97:a - 98:b - 99:c - 100:d - 101:e - 102:f - 103:g - 104:h - 105:i - 106:j - 107:k - 108:l - 109:m - 110:n - 111:o - 112:p - 113:q - 114:r - 115:s - 116:t - 117:u - 118:v - 119:w - 120:x - 121:y - 122:z - 123:{ - 124:| - 125:} - 126:~ - 
+

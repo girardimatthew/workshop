@@ -1,0 +1,159 @@
+diary on;
+a = (1:10).^2
+a =
+     1     4     9    16    25    36    49    64    81   100
+plot(a)
+plot(a)
+a = (-10:10).^2
+a =
+  Columns 1 through 13
+   100    81    64    49    36    25    16     9     4     1     0     1     4
+  Columns 14 through 21
+     9    16    25    36    49    64    81   100
+plot(a)
+figure(2)
+plot(a)
+t = -10:10
+t =
+  Columns 1 through 13
+   -10    -9    -8    -7    -6    -5    -4    -3    -2    -1     0     1     2
+  Columns 14 through 21
+     3     4     5     6     7     8     9    10
+b = t.^2
+b =
+  Columns 1 through 13
+   100    81    64    49    36    25    16     9     4     1     0     1     4
+  Columns 14 through 21
+     9    16    25    36    49    64    81   100
+figure(3)
+plot(t,b)
+x1 = 0 : 0.1 : 2*pi; y1 = sin(x1);
+x2 = pi/2 : 0.1 : 3*pi; y2 = cos(x2);
+plot(x1,y1,x2,y2)
+figure(4)
+plot(x1,y1,'r',x2,y2,'k:')
+help plot
+ <strong>plot</strong>   Linear plot. 
+    <strong>plot</strong>(X,Y) plots vector Y versus vector X. If X or Y is a matrix,
+    then the vector is plotted versus the rows or columns of the matrix,
+    whichever line up.  If X is a scalar and Y is a vector, disconnected
+    line objects are created and plotted as discrete points vertically at
+    X.
+ 
+    <strong>plot</strong>(Y) plots the columns of Y versus their index.
+    If Y is complex, <strong>plot</strong>(Y) is equivalent to <strong>plot</strong>(real(Y),imag(Y)).
+    In all other uses of <strong>plot</strong>, the imaginary part is ignored.
+ 
+    Various line types, plot symbols and colors may be obtained with
+    <strong>plot</strong>(X,Y,S) where S is a character string made from one element
+    from any or all the following 3 columns:
+ 
+           b     blue          .     point              -     solid
+           g     green         o     circle             :     dotted
+           r     red           x     x-mark             -.    dashdot 
+           c     cyan          +     plus               --    dashed   
+           m     magenta       *     star             (none)  no line
+           y     yellow        s     square
+           k     black         d     diamond
+           w     white         v     triangle (down)
+                               ^     triangle (up)
+                               <     triangle (left)
+                               >     triangle (right)
+                               p     pentagram
+                               h     hexagram
+                          
+    For example, <strong>plot</strong>(X,Y,'c+:') plots a cyan dotted line with a plus 
+    at each data point; <strong>plot</strong>(X,Y,'bd') plots blue diamond at each data 
+    point but does not draw any line.
+ 
+    <strong>plot</strong>(X1,Y1,S1,X2,Y2,S2,X3,Y3,S3,...) combines the plots defined by
+    the (X,Y,S) triples, where the X's and Y's are vectors or matrices 
+    and the S's are strings.  
+ 
+    For example, <strong>plot</strong>(X,Y,'y-',X,Y,'go') plots the data twice, with a
+    solid yellow line interpolating green circles at the data points.
+ 
+    The <strong>plot</strong> command, if no color is specified, makes automatic use of
+    the colors specified by the axes ColorOrder property.  By default,
+    <strong>plot</strong> cycles through the colors in the ColorOrder property.  For
+    monochrome systems, <strong>plot</strong> cycles over the axes LineStyleOrder property.
+ 
+    Note that RGB colors in the ColorOrder property may differ from
+    similarly-named colors in the (X,Y,S) triples.  For example, the 
+    second axes ColorOrder property is medium green with RGB [0 .5 0],
+    while <strong>plot</strong>(X,Y,'g') plots a green line with RGB [0 1 0].
+ 
+    If you do not specify a marker type, <strong>plot</strong> uses no marker. 
+    If you do not specify a line style, <strong>plot</strong> uses a solid line.
+ 
+    <strong>plot</strong>(AX,...) plots into the axes with handle AX.
+ 
+    <strong>plot</strong> returns a column vector of handles to lineseries objects, one
+    handle per plotted line. 
+ 
+    The X,Y pairs, or X,Y,S triples, can be followed by 
+    parameter/value pairs to specify additional properties 
+    of the lines. For example, <strong>plot</strong>(X,Y,'LineWidth',2,'Color',[.6 0 0]) 
+    will create a plot with a dark red line width of 2 points.
+ 
+    Example
+       x = -pi:pi/10:pi;
+       y = tan(sin(x)) - sin(tan(x));
+       plot(x,y,'--rs','LineWidth',2,...
+                       'MarkerEdgeColor','k',...
+                       'MarkerFaceColor','g',...
+                       'MarkerSize',10)
+ 
+    See also <a href="matlab:help plottools">plottools</a>, <a href="matlab:help semilogx">semilogx</a>, <a href="matlab:help semilogy">semilogy</a>, <a href="matlab:help loglog">loglog</a>, <a href="matlab:help plotyy">plotyy</a>, <a href="matlab:help plot3">plot3</a>, <a href="matlab:help grid">grid</a>,
+    <a href="matlab:help title">title</a>, <a href="matlab:help xlabel">xlabel</a>, <a href="matlab:help ylabel">ylabel</a>, <a href="matlab:help axis">axis</a>, <a href="matlab:help axes">axes</a>, <a href="matlab:help hold">hold</a>, <a href="matlab:help legend">legend</a>, <a href="matlab:help subplot">subplot</a>, <a href="matlab:help scatter">scatter</a>.
+
+    Overloaded methods:
+       <a href="matlab:help phytree/plot">phytree/plot</a>
+       <a href="matlab:help clustergram/plot">clustergram/plot</a>
+       <a href="matlab:help HeatMap/plot">HeatMap/plot</a>
+       <a href="matlab:help channel.plot">channel.plot</a>
+       <a href="matlab:help sfit/plot">sfit/plot</a>
+       <a href="matlab:help cfit/plot">cfit/plot</a>
+       <a href="matlab:help fints/plot">fints/plot</a>
+       <a href="matlab:help iddata/plot">iddata/plot</a>
+       <a href="matlab:help idnlhw/plot">idnlhw/plot</a>
+       <a href="matlab:help idnlarx/plot">idnlarx/plot</a>
+       <a href="matlab:help mpc/plot">mpc/plot</a>
+       <a href="matlab:help frd/plot">frd/plot</a>
+       <a href="matlab:help dspdata.plot">dspdata.plot</a>
+       <a href="matlab:help LinearModel/plot">LinearModel/plot</a>
+       <a href="matlab:help timeseries/plot">timeseries/plot</a>
+       <a href="matlab:help wdectree/plot">wdectree/plot</a>
+       <a href="matlab:help ntree/plot">ntree/plot</a>
+       <a href="matlab:help dtree/plot">dtree/plot</a>
+       <a href="matlab:help wvtree/plot">wvtree/plot</a>
+       <a href="matlab:help rwvtree/plot">rwvtree/plot</a>
+       <a href="matlab:help edwttree/plot">edwttree/plot</a>
+
+    Reference page in Help browser
+       <a href="matlab:doc plot">doc plot</a>
+
+figure(2)
+plot(t,b,'m--o')
+figure(2)
+plot(x1,y1,'r');
+hold on;
+hold on
+plot(x2,y2,'k:');
+hold off
+plot(x1,y1,'g*');
+figure(3)
+grid
+grid
+grid
+title('A Sine Plot and a Cosine Plot')
+xlabel('The argument of sine and cosine')
+ylabel('The value of sine and cosine')
+legend('sine','cosine')
+axis([-2 12 -1.5 1.5])
+close(4)
+close(3)
+close(2)
+close all;
+close all
+diary off

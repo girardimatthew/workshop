@@ -1,0 +1,30 @@
+# Define compiler
+CXX = g++
+CC = g++
+# Compiler flags
+CFLAGS = -c -Wall -std=c++17
+OBJECTS = main.o grade.o Student_info.o
+
+file_name = $(shell basename $(CURDIR))
+
+all: $(file_name)
+
+$(file_name): $(OBJECTS)
+	$(CC) $(OBJECTS) -o $(file_name).out 
+
+%.o: %.cpp
+	$(CC) $(CFLAGS) $<
+
+.PHONY: clean
+
+clean:
+	@echo "About to delete .o and .out files"
+	@rm -rf *.o *.out *.gch
+	@echo "Done deleting!"
+
+test:
+	@echo $(file_name)
+	@echo $(notdir $(CURDIR))
+	@echo $(CURDIR)
+	@echo $(shell basename $(CURDIR))
+	@echo $(CC) $(OBJECTS) -o $(file_name).out 

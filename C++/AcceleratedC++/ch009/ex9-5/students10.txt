@@ -1,0 +1,17 @@
+Abba     0    0
+Bart    10    0
+Chris   55   23
+Geert   53   80
+Johan   59   64
+Marie   52   85
+Jim     95    0
+Boris   58   64
+John    58   61
+Tor     69   55
+Lotte   80   61
+Jan      7   87
+Loris   41    6
+Lars    82   29
+Ciccio  96   70
+Burger  13   21
+Meggie  12   34

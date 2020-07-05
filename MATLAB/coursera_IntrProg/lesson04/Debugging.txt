@@ -1,0 +1,83 @@
+diary on
+1 = x
+ 1 = x
+   |
+{Error: The expression to the left of the equals sign is not a valid target for an
+assignment.
+} 
+ramd(2)
+{Undefined function 'ramd' for input arguments of type 'double'.} 
+randd(2)
+{Undefined function 'randd' for input arguments of type 'double'.} 
+rand(2)
+ans =
+    0.4033    0.5959
+    0.3562    0.7997
+y = rand(1,5)
+y =
+    0.2580    0.0637    0.2203    0.2008    0.8803
+y(6)
+{Index exceeds matrix dimensions.} 
+edit rand_int
+rand_int(3,3)
+The last element on the last row is 2
+ans =
+     3     3     3
+     3     2     1
+     3     1     2
+rand_int(3,2)
+{Index exceeds matrix dimensions.
+Error in <a href="matlab:helpUtils.errorDocCallback('rand_int', '/Users/matteogirardi/Dropbox/coding/matlab/lesson04/rand_int.m', 3)" style="font-weight:bold">rand_int</a> (<a href="matlab: opentoline('/Users/matteogirardi/Dropbox/coding/matlab/lesson04/rand_int.m',3,0)">line 3</a>)
+fprintf('The last element on the last row is %d\n', x(n,m));} 
+randi(2,3)
+ans =
+     1     2     1
+     2     1     2
+     1     1     1
+randi(3,2)
+ans =
+     2     1
+     2     1
+randi(3,2)
+ans =
+     1     1
+     2     3
+rand_int(3,2)
+<a href="matlab: opentoline('/Users/matteogirardi/Dropbox/coding/matlab/lesson04/rand_int.m',2,1)">2   </a>x = randi(n,m);
+if system_dependent('IsDebugMode')==1, dbstep; end
+m
+m =
+     2
+m = pi
+m =
+    3.1416
+x
+x =
+     2     1
+     1     1
+dbquit
+rand_int(3,2)
+<a href="matlab: opentoline('/Users/matteogirardi/Dropbox/coding/matlab/lesson04/rand_int.m',2,1)">2   </a>x = randi(10,n,m);
+dbquit
+rand_int(3,2)
+<a href="matlab: opentoline('/Users/matteogirardi/Dropbox/coding/matlab/lesson04/rand_int.m',2,1)">2   </a>x = randi(10,n,m);
+dbquit
+rand_int(3,2)
+The last element on the last row is 9
+ans =
+    10     8
+     6     1
+     9     9
+rand_int(3,4)
+The last element on the last row is 7
+ans =
+     3     2     7     8
+     2     6     6     2
+    10     1     3     7
+rand_int(3,10)
+The last element on the last row is 1
+ans =
+     7     2     8     9     9     1     1    10     2     6
+    10     7     9    10     7     4     5     7     6     3
+     9     5     5     9    10     5     9     6     5     1
+diary off

@@ -1,0 +1,57 @@
+diary on;
+sqrt(9)
+ans =
+     3
+sqrt([1 4; 9 16; 25 36])
+ans =
+     1     2
+     3     4
+     5     6
+%polymorphic function
+%having multiple forms, it can save a huge amount of work
+v = [1 2 3 -4 7]
+v =
+     1     2     3    -4     7
+sum(v)
+ans =
+     9
+A = [1 2; 3 4]
+A =
+     1     2
+     3     4
+sum(A)
+ans =
+     4     6
+%It returns a row vector, and each element of it is the sum of one column of the matrix
+%If the input is a vector, sum(vectorX) returns a scalar
+%sum() is polymorphic, but the output that it returns doesn't have the same
+%as its input
+a = max([1 2 -4 8])
+a =
+     8
+%max() returns the maximum number in that vector 
+[a b] = max([1 2 -4 8])
+a =
+     8
+b =
+     4
+%b is the index of the maximum number
+s = size([1 2; 3 4; 0 -2])
+s =
+     3     2
+%s is a vector, this is a 3-by-2 matrix, so it returns that vector, 3, 2
+s(1)
+ans =
+     3
+s(2)
+ans =
+     2
+[row col] = size([1 2; 3 4; 0 -2])
+row =
+     3
+col =
+     2
+%save the elements of its output in another way
+%number of rows in row
+%size behaves differently depending on the number of output arguments we ask for
+diary off;
